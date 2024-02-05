@@ -23,10 +23,21 @@ def main():
 
     # 結果用のリストを作成
     result = []
+    f_count = 0
+    c_count = 0
     for i in range(input_list[0]):
-        result.append(random.randint(1, input_list[1]))
+        rand_int = random.randint(1, input_list[1])
+        result.append(rand_int)
+        if rand_int <= 5:
+            c_count += 1
+        elif rand_int >= 95:
+            f_count += 1
     # 結果を出力
     print(f"({sum(result)}) < {result}")
+    if c_count > 0:
+        print(f"Critical x{c_count}")
+    if f_count > 0:
+        print(f"Fumble x{f_count}")
 
 
 if __name__ == "__main__":
