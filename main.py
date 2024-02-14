@@ -4,7 +4,7 @@ import re
 
 def main():
     # xdxxx形式の入力を受け取り、それに対応するサイコロの目を出力するプログラム
-    input_dice = input("dice:")
+    input_dice = input("dice: ")
     # xdxxx形式で入力されているかの判定
     # 正規表現を作成
     pattern = r"^(d[1-9][0-9]{0,2}|[1-9][0-9]{0,2}d[1-9][0-9]{0,2})$"
@@ -33,7 +33,7 @@ def main():
         elif rand_int >= 95:
             f_count += 1
     # 結果を出力
-    print(f"({sum(result)}) < {result}")
+    print(f"({sum(result)}) < {result} <{input_list[0]}d{input_list[1]}>")
     if c_count > 0:
         print(f"Critical x{c_count}")
     if f_count > 0:
