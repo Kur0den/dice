@@ -1,4 +1,0 @@
-misskey.py
-websockets
-
-python-dotenv
